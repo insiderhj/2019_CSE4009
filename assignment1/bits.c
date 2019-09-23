@@ -279,5 +279,5 @@ int isPower2(int x) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-    return 1 & ((x ^ (x + ~0)) >> 31) & (~x >> 31);
+    return 1 & ((~x & (x + ~0)) >> 31);
 }
