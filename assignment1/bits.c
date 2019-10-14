@@ -255,9 +255,8 @@ int replaceByte(int x, int n, int c) {
  *   Rating: 3 
  */
 int rotateLeft(int x, int n) {
-    int leftMask = ~0 << n;
     int rightMask = ~(~0 << n);
-    return ((x << n) & leftMask) | ((x >> (32 + ~n + 1)) & rightMask);
+    return (x << n) | ((x >> (32 + ~n + 1)) & rightMask);
 }
 /*
  * isPower2 - returns 1 if x is a power of 2, and 0 otherwise
