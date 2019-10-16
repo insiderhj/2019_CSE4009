@@ -199,7 +199,7 @@ void *mm_realloc(void *ptr, size_t size)
     // case: prev block is free
     if (!GET_ALLOC(HDRP(PREV_BLKP(ptr)))) {
         // add prev size to available size
-        size_t available += GET_SIZE(HDRP(PREV_BLKP(ptr)));
+        available += GET_SIZE(HDRP(PREV_BLKP(ptr)));
 
         // case: new size can fit in available size
         if (available >= alloc_size) {
